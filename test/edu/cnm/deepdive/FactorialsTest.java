@@ -36,4 +36,19 @@ class FactorialsTest {
     assertThrows(IllegalArgumentException.class, () -> Factorials.computeRecursive(-1));
   }
 
+  @Test
+  void computeIterative() {
+    for (int i = 0; i < inputValues.length; i++) {
+      int input = inputValues[i];
+      long expected = expectedValues[i];
+      long actual = Factorials.computeIterative(input);
+      assertEquals(expected, actual);
+    }
+  }
+
+  @Test
+  void computeIterative_negative() {
+    assertThrows(IllegalArgumentException.class, () -> Factorials.computeIterative(-1));
+  }
+
 }
