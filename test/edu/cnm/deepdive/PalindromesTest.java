@@ -17,14 +17,14 @@ public class PalindromesTest {
   @Test
   void computeRecursive() {
     for (int i = 0; i < inputValues.length; i++) {
-      assertEquals(expectedValues[i], Palindromes.testRecursive(inputValues[i]));
+      assertEquals(expectedValues[i], Palindromes.computeRecursive(inputValues[i]));
     }
   }
 
   @Test
   void computeIterative() {
     for (int i = 0; i < inputValues.length; i++) {
-      assertEquals(expectedValues[i], Palindromes.testIterative(inputValues[i]));
+      assertEquals(expectedValues[i], Palindromes.computeIterative(inputValues[i]));
     }
   }
 
