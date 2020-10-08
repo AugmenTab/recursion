@@ -1,6 +1,8 @@
 package edu.cnm.deepdive;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
 
 class FactorialsTest {
@@ -14,11 +16,11 @@ class FactorialsTest {
   };
   
   static final long[] expectedValues = {
-        1,
-        1,
-        120,
-        3628800,
-        6227020800L
+      1,
+      1,
+      120,
+      3628800,
+      6227020800L,
   };
 
   @Test
@@ -34,6 +36,15 @@ class FactorialsTest {
   @Test
   void computeRecursive_negative() {
     assertThrows(IllegalArgumentException.class, () -> Factorials.computeRecursive(-1));
+  }
+
+  @Test
+  void computeRecursiveBig() {
+    for (int i = 0; i < inputValues.length; i++) {
+      BigInteger input = BigInteger.valueOf(inputValues[i]);
+      BigInteger expected = BigInteger.valueOf(expectedValues[i]);
+      assertEquals(expected, Factorials.computeRecursiveBig(input));
+    }
   }
 
   @Test
