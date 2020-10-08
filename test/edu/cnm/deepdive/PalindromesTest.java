@@ -21,4 +21,11 @@ public class PalindromesTest {
     }
   }
 
+  @Test
+  void computeIterative() {
+    for (int i = 0; i < inputValues.length; i++) {
+      assertEquals(expectedValues[i], Palindromes.testIterative(inputValues[i]));
+    }
+  }
+
 }

@@ -10,4 +10,15 @@ public class Palindromes {
         );
   }
 
+  public static boolean testIterative(String phrase) {
+    boolean isPalindrome = true;
+    for (int i = 0; i < (int)Math.floor(phrase.length() / 2); i++) {
+      if (phrase.charAt(i) != (phrase.charAt(phrase.length() - (i + 1)))) {
+        isPalindrome = false;
+        break;
+      }
+    }
+    return isPalindrome;
+  }
+
 }
