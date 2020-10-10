@@ -2,9 +2,11 @@ package edu.cnm.deepdive;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.sql.SQLOutput;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Series of tests for the Palindrome class methods.
+ */
 public class PalindromesTest {
 
   static final String[] inputValues = {

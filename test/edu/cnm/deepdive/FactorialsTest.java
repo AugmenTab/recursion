@@ -5,7 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
 
-class FactorialsTest {
+/**
+ * Series of tests for the Factorials class methods.
+ */
+public class FactorialsTest {
   
   static final int[] inputValues = {
       0,
